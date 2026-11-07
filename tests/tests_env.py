@@ -1,10 +1,4 @@
-# Ajuste do sys.path
-import sys
-from pathlib import Path
-HOME = Path(__file__).resolve().parents[1]
-sys.path.append(str(HOME))
-
-# Imports internos
+from sys_path import HOME  # noqa: F401
 import main
 
 

@@ -1,14 +1,12 @@
 import sqlalchemy as sa
 from abc import ABC
 import pandas as pd
-
 # Ajuste do sys.path
 import sys
 from pathlib import Path
 HOME = Path(__file__).resolve().parents[1]
 sys.path.append(str(HOME))
-
-# Imports internos
+# Import Interno
 from model import conexoes
 
 

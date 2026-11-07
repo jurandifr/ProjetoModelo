@@ -1,8 +1,4 @@
-import sys
-from pathlib import Path
-# sys.path.append(str(Path(__file__).resolve().parents[1]))  # A partir da pasta superior
-sys.path.append(str(Path.cwd()))  # A partir da pasta de execução
-
+from sys_path import HOME  # noqa: F401
 from model import conexoes
 
 
