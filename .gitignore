@@ -1,0 +1,8 @@
+.gitignore
+.vscode
+__pycache__
+.pytest_cache
+.env
+.flake8
+*.code-workspace
+*.ipynb
