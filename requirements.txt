@@ -1,1 +1,4 @@
 python-dotenv>=1.2.4
+duckdb>=2.0.0
+sqlalchemy>=2.1.8
+duckdb-engine>=0.17.0

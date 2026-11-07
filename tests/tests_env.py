@@ -1,10 +1,10 @@
-# Pega o diretório onde ESTE arquivo de teste está atualmente
-# Sobe um nível para a raiz do projeto e adiciona ao sys.path
+# Ajuste do sys.path
 import sys
 from pathlib import Path
-sys.path.append(str(Path(__file__).resolve().parents[1]))
+HOME = Path(__file__).resolve().parents[1]
+sys.path.append(str(HOME))
 
-
+# Imports internos
 import main
 
 
