@@ -7,7 +7,7 @@ sys.path.append(str(HOME))
 import sqlalchemy as sa
 from abc import ABC
 import pandas as pd
-from model import conexoes
+from model import conexoes  # O ajuste do sys.path evita que esse import quebre
 
 
 class ModelController(ABC):
