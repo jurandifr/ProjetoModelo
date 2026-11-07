@@ -5,3 +5,4 @@ __pycache__
 .flake8
 *.code-workspace
 *.ipynb
+llm/1fly-behavior-classifier.Q4_K_M.gguf
