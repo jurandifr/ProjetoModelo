@@ -1,6 +1,6 @@
 import sqlalchemy as sa
 from abc import ABC
-from typing import cast
+import pandas as pd
 
 # Ajuste do sys.path
 import sys
@@ -30,7 +30,7 @@ class ModelController(ABC):
         query = (HOME / "model" / "sql" / f"{name}.sql").read_text(encoding="utf-8")
         return sa.text(query)
 
-    def get(self) -> sa.Sequence | None:
+    def get(self) -> pd.DataFrame:
         """_summary_\n
         Retorna os dados que serão usados
         Returns:
@@ -39,5 +39,5 @@ class ModelController(ABC):
         with self._db.connect() as cursor:
             res = cursor.execute(ModelController.sql("duck_db_show"))
             if res.returns_rows:
-                return cast(typ=sa.Sequence, val=res.fetchall())  # O cast é apenas para a tipagem não reclamar
-            return None
+                return pd.DataFrame(res.fetchall())  # O cast é apenas para a tipagem não reclamar
+            return pd.DataFrame()
