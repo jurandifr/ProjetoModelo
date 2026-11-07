@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import config
 from model.controller import ModelController
 from control.controller import ControlController
-from control.llm.controller import Drosophila
+from llm.controller import Drosophila
 
 load_dotenv()  # carrega variaveis ambiente
 CREDENCIAIS = os.environ.get('CREDENCIAIS')

@@ -1,7 +1,5 @@
-import sys
 from pathlib import Path
 HOME = Path(__file__).resolve().parents[1]
-sys.path.append(str(HOME))
 
 DB_DUCKDB = f"duckdb:///{HOME / "model" / "database" / "db.duckdb"}"
 

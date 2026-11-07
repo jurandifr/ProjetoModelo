@@ -1,5 +1,5 @@
 from sys_path import HOME  # noqa: F401
-from control.llm.controller import Drosophila
+from llm.controller import Drosophila
 
 
 def test_drosophila():

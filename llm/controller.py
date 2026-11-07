@@ -4,9 +4,8 @@ import numpy as np
 from abc import ABC
 
 from pathlib import Path
-HOME = Path(__file__).resolve().parents[2]
-DIR = HOME / "control" / "llm"
-MODEL = str(DIR / "fly-behavior-classifier.Q4_K_M.gguf")
+HOME = Path(__file__).resolve().parents[1]
+MODEL = str(HOME / "llm" / "fly-behavior-classifier.Q4_K_M.gguf")
 
 
 class Drosophila(ABC):
