@@ -7,13 +7,18 @@ from control.controller import ControlController
 load_dotenv()  # carrega variaveis ambiente
 CREDENCIAIS = os.environ.get('CREDENCIAIS')
 
-model = ModelController()
-dados = model.get()
-processado = ControlController.process(dados=dados)
 
-if __name__ == "__main__":
+def run():
+    model = ModelController()
+    dados = model.get()
+    processado = ControlController.process(dados=dados)
+
     # exemplo
     print(CREDENCIAIS)
     print(config.DEBUG_MODE)
     print(dados)
     print(processado)
+
+
+if __name__ == "__main__":
+    run()
